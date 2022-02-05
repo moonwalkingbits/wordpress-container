@@ -238,6 +238,6 @@ class Container implements Container_Interface {
 			throw new Dependency_Resolution_Exception( $parameter );
 		}
 
-		return $this->resolve( (string) $type );
+		return $this->resolve( $type instanceof ReflectionNamedType ? $type->getName() : (string) $type );
 	}
 }
