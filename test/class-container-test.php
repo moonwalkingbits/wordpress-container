@@ -22,7 +22,7 @@ class Container_Test extends TestCase {
 	 * @test
 	 */
 	public function should_implement_container_interface(): void {
-		$this->assertContains( Container_Interface::class, class_implements( $this->container::class ) );
+		$this->assertContains( Container_Interface::class, class_implements( get_class( $this->container ) ) );
 	}
 
 	/**
