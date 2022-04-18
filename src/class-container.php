@@ -63,9 +63,8 @@ class Container implements Container_Interface {
 	 * @param string $class_name Name of the class to bind to the identifier.
 	 */
 	public function bind_class( string $identifier, string $class_name ): void {
-		$this->bindings[ $identifier ] = fn(
-			...$parameters
-		) => $this->resolve( $class_name, ...$parameters );
+		// @phan-suppress-next-line PhanParamNameIndicatingUnusedInClosure
+		$this->bindings[ $identifier ] = fn( $_, ...$parameters ) => $this->resolve( $class_name, ...$parameters );
 	}
 
 	/**

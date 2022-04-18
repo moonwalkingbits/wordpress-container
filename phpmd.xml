@@ -26,7 +26,7 @@
 	<rule ref="rulesets/unusedcode.xml"/>
 	<rule ref="rulesets/naming.xml/ShortVariable">
 		<properties>
-			<property name="exceptions" value="a,b"/>
+			<property name="exceptions" value="a,b,_"/>
 		</properties>
 	</rule>
 	<rule ref="rulesets/naming.xml/LongVariable">
