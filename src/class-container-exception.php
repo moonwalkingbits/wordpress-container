@@ -10,12 +10,12 @@
 
 namespace Moonwalking_Bits\Container;
 
-use Exception;
+use RuntimeException;
 
 /**
  * An exception class intended to be extended by all other container exceptions.
  *
  * @since 0.1.0
- * @see \Exception
+ * @see \RuntimeException
  */
-class Container_Exception extends Exception {}
+class Container_Exception extends RuntimeException {}
