@@ -67,4 +67,13 @@ interface Container_Interface {
 	 * @return mixed Callable invokation return value.
 	 */
 	public function invoke( callable $callable, ...$parameters );
+
+	/**
+	 * Adds an identifier alias.
+	 *
+	 * @since 0.4.0
+	 * @param string $identifier Arbitrary identifier.
+	 * @param string $alias Arbitrary identifier alias.
+	 */
+	public function alias( string $identifier, string $alias ): void;
 }
